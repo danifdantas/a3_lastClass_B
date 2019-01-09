@@ -13,16 +13,7 @@
     <main id="app">
       <h4 class="welcome-message">{{ mainmessage }}</h4>
       <ul>
-        <poster></poster>
-        <poster></poster>
-        <poster></poster>
-        <!-- <li v-for="video in videodata">
-                <button :data-movie="video.id" v-on:click="fetchMore" class="more-details">More Details...</button>
-                <a :href="video.vid_path" v-on:click="loadMovie">
-                    <img :src="'images/' + video.vid_thumb" alt="">
-                </a>
-                <p>put genre data here</p>  
-            </li> -->
+        <poster v-for="video in videodata" :video="video"></poster>
       </ul>
 
       <p class="instructions"><i>Click on a poster to preview the movie!</i></p>

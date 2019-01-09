@@ -1,10 +1,11 @@
 (() => {
   // define a global component
   Vue.component("poster", {
+    props: ["video"], // hold the dynamic data from the DB / vue model
     template: `<li>
                  <button class="more-details">More Details...</button>
-                     <a>
-                        <img src="images/avengers.jpg" alt="">
+                     <a :href="video.vid_path">
+                        <img :src="'images/' + video.vid_thumb" alt="">
                     </a>
                     <p>put genre data here</p> 
                 </li>`
